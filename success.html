@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rounded+Mplus+1c:wght@400;700&display=swap" rel="stylesheet">
+    <title>RamenGo - Success</title>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-left">
+            <img src="image/fundo_success.png" alt="" class="background-image">
+            <div class="order-details">
+                <img id="order-image" src="" alt="Ramen" class="image-prato">
+                <div class="order-text">                    
+                    <h3>Your Order: </h3>                   
+                    <h2 id="order-title"></h2>
+                </div>
+            </div>
+        </div>
+        <div class="success-right">
+            <img src="image/pessoa_success.png" alt="Person" class="person-image">
+            <div class="preparation-text">
+                <h3>どもありがとうございます</h3>
+                <h2>Your order is being prepared</h2>
+                <p>Hold on, when you least expect you will be eating your rámen.</p>
+            </div>
+
+            <button class="action-button-success" onclick="placeNewOrder()">
+                <span>Place new order</span>
+                <img src="image/icon/btn/setaAmarela.png" alt="Seta">
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function placeNewOrder() {
+            window.location.href = 'index.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderImageSrc = decodeURIComponent(urlParams.get('image'));
+        const orderTitleText = decodeURIComponent(urlParams.get('title'));
+
+        document.getElementById('order-image').src = orderImageSrc;
+        document.getElementById('order-title').textContent = orderTitleText;
+        });
+    </script>
+</body>
+</html>

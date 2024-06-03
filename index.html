@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rounded+Mplus+1c:wght@400;700&display=swap" rel="stylesheet">
+    <title>RamenGo</title>
+</head>
+<body>
+    <div class="banner">              
+        <img src="image/capa_topo.png" alt="Caldo 1" class="banner-image">
+        <img src="image/logoAmarela.png" alt="Logo" class="logo">  
+        <div class="titles">
+            <div class="subtitle">Enjoy a good ramen in the comfort of your house. Create your own ramen and choose your favorite flavour combination!</div>
+            <button class="action-button">
+                <span>ORDER NOW</span>
+                <img src="image/icon/btn/setaAmarela.png" alt="Seta">
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>First things first: select your favorite broth.</h2>
+            <p>It will give the whole flavor on your ramen soup.</p>
+            <div class="card-container" id="broths"></div>
+        </div>
+        <div class="section">
+            <h2>It’s time to choose (or not) your meat!</h2>
+            <p>Some people love, some don’t. We have options for all tastes.</p>
+            <div class="card-container" id="proteins"></div>
+        </div>
+        <div class="section-button">
+            <button class="btnOrdem" id="place-order-btn">
+                <span>Place my order</span>
+                <img src="image/icon/btn/setaBranca.png" alt="Seta">
+            </button>
+        </div>
+    </div>
+
+    <div id="alert-modal" class="modal-alert">
+        <div class="modalcontent-alert">
+            <img src="image/balao-azul.png" alt="Seta">
+            <span id="close-modal" class="close">&times;</span>
+            <p id="alert-message"></p>
+        </div>
+    </div>
+
+    <!-- Modal success -->
+    <div id="custom-modal" class="modal">
+        <div class="modal-content">
+            <img src="image/balao-amarelo.png" alt="Seta">
+            <span id="close-custom-modal" class="close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="js/RamenGo.js"></script>
+</body>
+</html>

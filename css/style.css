@@ -1,0 +1,381 @@
+body {
+    font-family: 'Rounded Mplus 1c', sans-serif;
+    background-color: #FAFAED;
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    width: 150px;
+}
+
+.titles {
+    position: absolute;
+    top: 80%;
+    left: 34%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    z-index: 999;
+    text-align: left;
+    max-width: 300px;
+}
+
+.subtitle {
+    margin-top: 20px;
+    font-size: 24px;
+    z-index: 999;
+}
+
+.action-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    width: 213px;
+    height: 60px;
+    background-color: #1820EF;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer; 
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.action-button:hover {
+    background-color: #0000cc;
+} 
+
+.container {
+    max-width: 1500px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    color: #1820EF;    
+    text-align: center;
+    margin-top: 50px;
+    font-size: 32px;
+}
+
+.section p {
+    color: #000000;    
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 16px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 300px;
+    height: 270px;
+    background-color: #FAFAED;
+    border-radius: 12px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card img {
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.iconeAtivo {
+    display: none;
+}
+
+.card h3 {
+    color: #1820EF;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.card p {
+    color: #000000;
+    font-size: 16px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.card .price {
+    color: #FF4E42;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card.selected {
+    background-color: #1820EF;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.card.selected img {
+    filter: none;
+    opacity: 1;
+}
+
+.card.selected .price {
+    color: #FFC024;
+}
+
+.card.selected h3,
+.card.selected p {
+    color: #ffffff;
+}
+
+.section-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnOrdem {
+    padding: 10px 20px;
+    width: 220px;
+    height: 60px;
+    background-color: #C5C5C5;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.btnOrdem span {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.btnOrdem img {
+    margin-left: 10px;
+}
+
+/* Modal escolha as opçoes*/
+
+.modal-alert {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalcontent-alert {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 50px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modalcontent-alert img{
+    width: 15%;
+    height: 15%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#alert-message {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+/* tela Success*/
+
+.success-container {
+    display: flex;
+    height: 100vh;
+    font-family: 'Rounded Mplus 1c', sans-serif;
+}
+
+.success-left, .success-right {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.order-details {
+    position: relative;
+    z-index: 1;
+}
+
+.order-image {
+    width: 354px;
+    height: 392px;
+}
+
+.order-text h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 0px;
+}
+
+.order-text h2{
+    color: #FFC024;
+    font-size: 32px;
+    margin-top: 0px;
+}
+
+.person-image {
+    width: 10%;
+    height: auto;
+}
+
+.preparation-text h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #FFC024;
+}
+
+.preparation-text h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 32px;
+    color: #FF4E42;
+}
+
+.preparation-text p {
+    margin-top: 0;
+    font-size: 16px;
+    color: #000;
+}
+
+.action-button-success{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #1820EF;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    width: 223px;
+    height: 60px;
+}
+
+.action-button-success span {
+    margin-right: 10px;
+}
+
+.action-button-success img {
+    width: 16px;
+    height: 16px;
+}
+
+.action-button-success:hover {
+    background-color: #0000cc;
+}
+
+/* modal success*/
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.modal-content img {
+    width: 15%;
+    height: 15%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
