@@ -13,7 +13,7 @@ body {
 
 .banner-image {
     width: 100%;
-    height: auto;
+    height: 890px;
     display: block;
 }
 
@@ -24,10 +24,70 @@ body {
     width: 150px;
 }
 
+.ellipse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px; 
+}
+
+.entregadora {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    width: 630px;
+}
+
+.balao-amarelo {
+    position: absolute;
+    top: 33%;
+    right: 30%;
+    width: 100px;
+}
+
+.balao-azul {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    width: 100px;
+}
+
+.vertical-text {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-left: 65px;
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    z-index: 999;
+}
+
+.vertical-text p {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin: 0;
+    font-size: 70px;
+    font-weight: bold;
+    color: #FFC024;
+    margin-bottom: 45px;
+    padding: 0;
+}
+
+.vertical-text h2 {
+    font-size: 170px;
+    margin: 0;    
+    font-weight:bold;
+}
+
 .titles {
     position: absolute;
     top: 80%;
-    left: 34%;
+    left: 25%;
     transform: translate(-50%, -50%);
     color: #ffffff;
     z-index: 999;
@@ -36,8 +96,9 @@ body {
 }
 
 .subtitle {
-    margin-top: 20px;
-    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
     z-index: 999;
 }
 
@@ -378,4 +439,186 @@ body {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .action-button{
+        display: none;
+    }  
+
+    .logo {
+        position: absolute;
+        top: 20px;
+        text-align: center;
+        width: 150px;
+        left: 35%;
+    }
+
+    .banner {
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    
+    .banner-image {
+        width: 100%;
+        display:block;
+    }
+
+    .ellipse {
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 280px; 
+    }
+    
+    .entregadora {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+        width: 350px;
+    }
+    
+    .balao-amarelo {
+        position: absolute;
+        top: 27%;
+        right: 15%;
+        width: 70px;
+    }
+    
+    .balao-azul {
+        position: absolute;
+        top: 12%;
+        left: 15%;
+        width: 60px;
+    }
+
+
+    
+    .vertical-text {
+        flex-direction: column;
+        color: #ffffff;
+        top: 83%;
+        margin-left: 30%;
+    }
+
+    .vertical-text p {
+        writing-mode: horizontal-tb;
+        transform: none;
+        font-size: 50px;
+        margin-top: 100px;
+        align-items: center; 
+        margin-right: 18%;       
+    }
+
+    .vertical-text h2 {
+        font-size: 120px;
+        margin-top: -70px;
+        font-weight: bold;       
+    }
+
+    .titles {
+        margin-top: 50%;
+        margin-left: 25%;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .subtitle {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        z-index: 999;
+        text-align: center;
+    }
+    
+    
+
+    .carousel-container {
+        position: relative;
+    }
+
+    .card-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .card {
+        min-width: 260px;
+        flex: 0 0 auto;
+        margin-right: 20px;
+        scroll-snap-align: start;
+    }
+
+    .carousel-indicators {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .carousel-indicators button {
+        border: none;
+        background-color: #C5C5C5;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .carousel-indicators .active {
+        background-color: #1820EF;
+    }
+
+
+
+
+    /*mobile tela success*/
+    .success-container {
+        flex-direction: column;      
+    }
+
+    .success-left {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .success-right {
+        width: 100%;
+        margin-top: 50px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .order-image {
+        width: 154px;
+        height: 192px;
+    }
+    
+    .preparation-text h2 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 32px;
+        color: #FF4E42;
+    }
+
+    .action-button-success {
+        width: 235px;
+    }
+}
+
+
+@media only screen and (min-width: 769px) {
+    .carousel-indicators {
+        display: none;
+    }
 }
